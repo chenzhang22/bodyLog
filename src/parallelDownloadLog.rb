@@ -9,7 +9,7 @@ def findRepository(repo)
     repository=nil
     i+=1
     sleep 60
-    retry if i<60
+    retry if i<20
   end
   return repository
 end
@@ -22,7 +22,7 @@ def getLastBuildNumber(repository)
     lastBuildNumber=nil
     i+=1
     sleep 60
-    retry if i<60
+    retry if i<20
   end
   return lastBuildNumber
 end
@@ -35,7 +35,7 @@ def getBuild(repository,number)
     build=nil
     sleep 60
     i+=1
-    retry if i<240
+    retry if i<20
   end
   return build
 end
@@ -48,7 +48,7 @@ def getLog(job)
     log=nil
     sleep 60
     i+=1
-    retry if i<240
+    retry if i<20
   end
   return log
 end
